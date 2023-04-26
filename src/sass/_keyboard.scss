@@ -1,0 +1,31 @@
+.keyboard {
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 784px;
+    background-color: aquamarine;
+}
+.key {
+    $border-size: 6px;
+    width: 43px;
+    height: 43px;
+    transform: rotateX(40deg);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &_primary {
+        background-color: $color-primary;
+        border-left: $border-size solid $color-primary-border;
+        border-bottom: $border-size solid $color-primary-border;
+        border-right: $border-size solid $color-primary-border;
+    }
+    &_secondary {
+        background-color: $color-secondary;
+        border-left: $border-size solid $color-secondary-border;
+        border-bottom: $border-size solid $color-secondary-border;
+        border-right: $border-size solid $color-secondary-border;
+    }
+    &_press {
+        background-color: $color-primary-press;
+    }
+}

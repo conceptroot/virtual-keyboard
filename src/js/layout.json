@@ -1,0 +1,383 @@
+[
+    {
+        "id": "tab",
+        "layers": {
+            "en": "tab"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "q",
+        "layers": {
+            "en": "q",
+            "ru": "й"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "w",
+        "layers": {
+            "en": "w",
+            "ru": "ц"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "e",
+        "layers": {
+            "en": "e",
+            "ru": "у"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "r",
+        "layers": {
+            "en": "r",
+            "ru": "к"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "t",
+        "layers": {
+            "en": "t",
+            "ru": "е"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "y",
+        "layers": {
+            "en": "y",
+            "ru": "н"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "u",
+        "layers": {
+            "en": "u",
+            "ru": "г"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "i",
+        "layers": {
+            "en": "i",
+            "ru": "ш"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "o",
+        "layers": {
+            "en": "o",
+            "ru": "щ"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "p",
+        "layers": {
+            "en": "p",
+            "ru": "з"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "backspace",
+        "layers": {
+            "en": "<-"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "escape",
+        "layers": {
+            "en": "esc"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    },
+    {
+        "id": "a",
+        "layers": {
+            "en": "a",
+            "ru": "ф"
+        },
+        "style": "primary"
+    }
+]

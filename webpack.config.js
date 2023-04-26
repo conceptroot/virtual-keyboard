@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
-  
+// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env, options) => {
 	const isProduction = options.mode === 'production'
@@ -58,7 +58,15 @@ module.exports = (env, options) => {
 		plugins: [
 			new HtmlWebpackPlugin({
 				template: 'src/index.html'
-			})
+			}),
+            // new CopyPlugin({
+				// patterns: [
+					// { 
+						// from: "src/js/layout.json",
+						// to: "static", 
+					// },
+				// ],
+			// }),
 		],
 	}
 
