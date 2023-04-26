@@ -109,275 +109,261 @@
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "s",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "s",
+            "ru": "ы"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "d",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "d",
+            "ru": "в"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "f",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "f",
+            "ru": "а"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "g",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "g",
+            "ru": "п"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "h",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "h",
+            "ru": "р"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "j",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "j",
+            "ru": "о"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "k",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "k",
+            "ru": "л"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "l",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "l",
+            "ru": "д"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": ";",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": ";",
+            "ru": "ж"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "'",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "'",
+            "ru": "э"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "shift",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "shift"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "z",
+        "layers": {
+            "en": "z",
+            "ru": "я"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "x",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "x",
+            "ru": "ч"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "c",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "c",
+            "ru": "с"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "v",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "v",
+            "ru": "м"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "b",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "b",
+            "ru": "и"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "n",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "n",
+            "ru": "т"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "m",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "m",
+            "ru": "ь"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": ",",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": ",",
+            "ru": "б"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": ".",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": ".",
+            "ru": "ю"
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "/",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "/",
+            "ru": "."
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "enter",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "enter"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "fn",
+        "layers": {
+            "en": "fn"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "control",
+        "layers": {
+            "en": "ctrl"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "option",
+        "layers": {
+            "en": "opt"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "command",
+        "layers": {
+            "en": "cmd"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "fn",
+        "layers": {
+            "en": "fn"
+        },
+        "style": "secondary"
+    },
+    {
+        "id": "space",
+        "layers": {
+            "en": ""
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "space",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": ""
         },
         "style": "primary"
     },
     {
-        "id": "a",
+        "id": "fn",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "fn"
         },
-        "style": "primary"
+        "style": "secondary"
     },
     {
-        "id": "a",
+        "id": "left",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "⬅️"
         },
-        "style": "primary"
+        "style": "secondary"
     },
     {
-        "id": "a",
+        "id": "down",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "🔽"
         },
-        "style": "primary"
+        "style": "secondary"
     },
     {
-        "id": "a",
+        "id": "up",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "🔼"
         },
-        "style": "primary"
+        "style": "secondary"
     },
     {
-        "id": "a",
+        "id": "right",
         "layers": {
-            "en": "a",
-            "ru": "ф"
+            "en": "➡️"
         },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
-    },
-    {
-        "id": "a",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
-        "style": "primary"
+        "style": "secondary"
     }
 ]
