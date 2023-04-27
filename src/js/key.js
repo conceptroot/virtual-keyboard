@@ -12,26 +12,37 @@ export class Key {
         this.createElement()
         this.initEventlistners()
     }
+    // Визуализация и анимация кнопки
+    renderPress() {
+        this.html.classList.toggle('key_press')
+        setTimeout(e => {
+            this.html.classList.toggle('key_press')
+        }, 300)
+    }
+    // Запуск кастомного ивента
+    emitVirtualPressEvent(){
+        const virtual_kb_press_event = new CustomEvent(
+            "virtual_kb_press", 
+            {
+                bubbles: true,
+                detail: {
+                    id: this.id,
+                    key: this.layers['en'] //TODO
+                }
+            })
+        this.html.dispatchEvent(virtual_kb_press_event)
+
+    }
     initEventlistners() {
         this.html.addEventListener('click', (e) => {
-            // Запуск кастомного ивента
-            const virtual_kb_press_event = new CustomEvent(
-                "virtual_kb_press", 
-                {
-                    bubbles: true,
-                    detail: {
-                        id: this.id,
-                        key: this.layers['en'] //TODO
-                    }
-                })
-            this.html.dispatchEvent(virtual_kb_press_event)
-
-            // Визуализация и анимация кнопки
-            this.html.classList.toggle('key_press')
-            setTimeout(e => {
-                this.html.classList.toggle('key_press')
-            }, 300)
-            
+            this.emitVirtualPressEvent()
+            this.renderPress()
+            console.log(this)
+        })
+        document.body.addEventListener('keydown', e => {
+            if (this.id !== e.key) return
+            this.emitVirtualPressEvent()
+            this.renderPress()
             console.log(this)
         })
     }
@@ -46,8 +57,6 @@ export class Key {
         }
         key.textContent = this.layers['en'] // TODO
         this.html = key
-        // console.log('#key=', this.html)
-
     }
 }
 
