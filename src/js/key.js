@@ -30,9 +30,9 @@ export class Key {
             this.html.classList.toggle('key_press')
             setTimeout(e => {
                 this.html.classList.toggle('key_press')
-            }, 600)
-
-
+            }, 300)
+            
+            console.log(this)
         })
     }
     createElement() {
@@ -46,9 +46,7 @@ export class Key {
         }
         key.textContent = this.layers['en'] // TODO
         this.html = key
-        console.log('#key=', this.html)
-        // удалить TODO
-        // document.querySelector('.keyboard').append(this.html)
+        // console.log('#key=', this.html)
 
     }
 }

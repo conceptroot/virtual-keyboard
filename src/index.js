@@ -1,9 +1,7 @@
 import { Keyboard } from "./js/keyboard"
+import { Textarea } from "./js/textarea"
 
 window.onload = async () => {
+    const textarea = new Textarea()
     const keyboard = new Keyboard()
-    
-    document.querySelector('body').addEventListener('virtual_kb_press', e => {
-        console.log('triggerd virtual_kb_press', e.detail)
-    }, false)
 }

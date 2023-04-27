@@ -7,7 +7,7 @@ export class Keyboard {
         this.html = null
 
         this.init()
-        console.log('#keys:', this.keys)
+        // console.log('#keys:', this.keys)
     }
 
     init() {
