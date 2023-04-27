@@ -1,8 +1,10 @@
+const UPPER = true
 export class Key {
     constructor (key_config) {
         this.id = key_config.id
         this.layers = key_config.layers // dict
         this.listner = "TODO"
+        this.layer = 'ru'  // ru, en
         this.style = key_config.style // primary, secondary
         this.html = null
         this.init()
@@ -20,13 +22,27 @@ export class Key {
     }
     // Запуск кастомного ивента
     emitVirtualPressEvent(){
+        let key
+        if (this.id.startsWith('Key')) {
+            if (this.layer === 'en') {
+                key = this.layers['en']
+            } else if (this.layer === 'ru') {
+                key = this.layers['ru']
+            } else {
+                key = 'ошибка'
+            }
+            if (UPPER) {
+                key = key.toUpperCase()
+            }
+        }
+
         const virtual_kb_press_event = new CustomEvent(
             "virtual_kb_press", 
             {
                 bubbles: true,
                 detail: {
                     id: this.id,
-                    key: this.layers['en'] //TODO
+                    key: key
                 }
             })
         this.html.dispatchEvent(virtual_kb_press_event)

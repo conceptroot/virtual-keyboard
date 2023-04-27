@@ -10,13 +10,17 @@ export class Textarea {
     }
     initEventListeners() {
         document.body.addEventListener('virtual_kb_press', e => {
-            if (e.detail.id === 'backspace') {
+            if (e.detail.id === 'Backspace') {
                 this.html.textContent = this.html.textContent.slice(0,-1)
-            } else if (e.detail.id === 'enter') {
+            } else if (e.detail.id === 'Enter') {
                 this.html.textContent += '\n'
-            } 
-            else {
+            } else if (e.detail.id === 'Space') {
+                this.html.textContent += ' '
+            } else if (e.detail.id.startsWith('Key')) {
                 this.html.textContent += e.detail.key 
+            }
+            else {
+                console.log('Не попали:', e.detail)
             }
         })
 
