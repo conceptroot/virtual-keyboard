@@ -1,7 +1,15 @@
-$color-primary: rgb(255, 255, 255);
-$color-primary-border: rgb(124, 135, 248);
-$color-primary-press: rgb(215, 218, 252);
 
-$color-secondary: rgb(234, 233, 135);
-$color-secondary-border: darken(rgb(234, 233, 135), 50%);
-$color-secondary-press: darken(rgb(234, 233, 135), 20%);
+
+$background-primary: 
+            radial-gradient(
+                73.44% 73.44% at 50% 32.03%,
+                rgba(255, 255, 255, 0.0715) 0%,
+                rgba(5, 5, 5, 0.13) 100%), 
+            #FFFFFF;
+
+$background-secondary: 
+            radial-gradient(
+                73.44% 73.44% at 50% 32.03%,
+                rgba(255, 255, 255, 0.0715) 0%,
+                rgba(5, 5, 5, 0.13) 100%), 
+            #ffc800;
