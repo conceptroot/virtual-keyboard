@@ -14,6 +14,9 @@ export class Key {
     initEventlistners() {
         this.html.addEventListener('click', (e) => {
             this.html.classList.toggle('key_press')
+            setTimeout(e => {
+                this.html.classList.toggle('key_press')
+            }, 600)
         })
     }
     createElement() {
