@@ -48,7 +48,7 @@ export class Key {
         this.html = key
         console.log('#key=', this.html)
         // удалить TODO
-        document.querySelector('.keyboard').append(this.html)
+        // document.querySelector('.keyboard').append(this.html)
 
     }
 }
