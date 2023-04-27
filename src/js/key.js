@@ -1,4 +1,3 @@
-
 export class Key {
     constructor (key_config) {
         this.id = key_config.id
@@ -40,7 +39,7 @@ export class Key {
             console.log(this)
         })
         document.body.addEventListener('keydown', e => {
-            if (this.id !== e.key) return
+            if (this.id !== e.code) return
             this.emitVirtualPressEvent()
             this.renderPress()
             console.log(this)

@@ -1,13 +1,13 @@
 [
     {
-        "id": "tab",
+        "id": "Tab",
         "layers": {
             "en": "tab"
         },
         "style": "secondary"
     },
     {
-        "id": "q",
+        "id": "KeyQ",
         "layers": {
             "en": "q",
             "ru": "й"
@@ -15,7 +15,7 @@
         "style": "primary"
     },
     {
-        "id": "w",
+        "id": "KeyW",
         "layers": {
             "en": "w",
             "ru": "ц"
@@ -23,7 +23,7 @@
         "style": "primary"
     },
     {
-        "id": "e",
+        "id": "KeyE",
         "layers": {
             "en": "e",
             "ru": "у"
@@ -31,7 +31,7 @@
         "style": "primary"
     },
     {
-        "id": "r",
+        "id": "KeyR",
         "layers": {
             "en": "r",
             "ru": "к"
@@ -39,7 +39,7 @@
         "style": "primary"
     },
     {
-        "id": "t",
+        "id": "KeyT",
         "layers": {
             "en": "t",
             "ru": "е"
@@ -47,7 +47,7 @@
         "style": "primary"
     },
     {
-        "id": "y",
+        "id": "KeyY",
         "layers": {
             "en": "y",
             "ru": "н"
@@ -55,7 +55,7 @@
         "style": "primary"
     },
     {
-        "id": "u",
+        "id": "KeyU",
         "layers": {
             "en": "u",
             "ru": "г"
@@ -63,7 +63,7 @@
         "style": "primary"
     },
     {
-        "id": "i",
+        "id": "KeyI",
         "layers": {
             "en": "i",
             "ru": "ш"
@@ -71,7 +71,7 @@
         "style": "primary"
     },
     {
-        "id": "o",
+        "id": "KeyO",
         "layers": {
             "en": "o",
             "ru": "щ"
@@ -79,7 +79,7 @@
         "style": "primary"
     },
     {
-        "id": "p",
+        "id": "KeyP",
         "layers": {
             "en": "p",
             "ru": "з"
@@ -87,21 +87,21 @@
         "style": "primary"
     },
     {
-        "id": "backspace",
+        "id": "Backspace",
         "layers": {
             "en": "<-"
         },
         "style": "secondary"
     },
     {
-        "id": "escape",
+        "id": "Escape",
         "layers": {
             "en": "esc"
         },
         "style": "secondary"
     },
     {
-        "id": "a",
+        "id": "KeyA",
         "layers": {
             "en": "a",
             "ru": "ф"
@@ -109,7 +109,7 @@
         "style": "primary"
     },
     {
-        "id": "s",
+        "id": "KeyS",
         "layers": {
             "en": "s",
             "ru": "ы"
@@ -117,7 +117,7 @@
         "style": "primary"
     },
     {
-        "id": "d",
+        "id": "KeyD",
         "layers": {
             "en": "d",
             "ru": "в"
@@ -125,7 +125,7 @@
         "style": "primary"
     },
     {
-        "id": "f",
+        "id": "KeyF",
         "layers": {
             "en": "f",
             "ru": "а"
@@ -133,7 +133,7 @@
         "style": "primary"
     },
     {
-        "id": "g",
+        "id": "KeyG",
         "layers": {
             "en": "g",
             "ru": "п"
@@ -141,7 +141,7 @@
         "style": "primary"
     },
     {
-        "id": "h",
+        "id": "KeyH",
         "layers": {
             "en": "h",
             "ru": "р"
@@ -149,7 +149,7 @@
         "style": "primary"
     },
     {
-        "id": "j",
+        "id": "KeyJ",
         "layers": {
             "en": "j",
             "ru": "о"
@@ -157,7 +157,7 @@
         "style": "primary"
     },
     {
-        "id": "k",
+        "id": "KeyK",
         "layers": {
             "en": "k",
             "ru": "л"
@@ -165,7 +165,7 @@
         "style": "primary"
     },
     {
-        "id": "l",
+        "id": "KeyL",
         "layers": {
             "en": "l",
             "ru": "д"
@@ -173,7 +173,7 @@
         "style": "primary"
     },
     {
-        "id": ";",
+        "id": "Semicolon",
         "layers": {
             "en": ";",
             "ru": "ж"
@@ -181,7 +181,7 @@
         "style": "primary"
     },
     {
-        "id": "'",
+        "id": "Quote",
         "layers": {
             "en": "'",
             "ru": "э"
@@ -189,14 +189,14 @@
         "style": "primary"
     },
     {
-        "id": "shift",
+        "id": "ShiftLeft",
         "layers": {
             "en": "shift"
         },
         "style": "secondary"
     },
     {
-        "id": "z",
+        "id": "KeyZ",
         "layers": {
             "en": "z",
             "ru": "я"
@@ -204,7 +204,7 @@
         "style": "primary"
     },
     {
-        "id": "x",
+        "id": "KeyX",
         "layers": {
             "en": "x",
             "ru": "ч"
@@ -212,7 +212,7 @@
         "style": "primary"
     },
     {
-        "id": "c",
+        "id": "KeyC",
         "layers": {
             "en": "c",
             "ru": "с"
@@ -220,7 +220,7 @@
         "style": "primary"
     },
     {
-        "id": "v",
+        "id": "KeyV",
         "layers": {
             "en": "v",
             "ru": "м"
@@ -228,7 +228,7 @@
         "style": "primary"
     },
     {
-        "id": "b",
+        "id": "KeyB",
         "layers": {
             "en": "b",
             "ru": "и"
@@ -236,7 +236,7 @@
         "style": "primary"
     },
     {
-        "id": "n",
+        "id": "KeyN",
         "layers": {
             "en": "n",
             "ru": "т"
@@ -244,7 +244,7 @@
         "style": "primary"
     },
     {
-        "id": "m",
+        "id": "KeyM",
         "layers": {
             "en": "m",
             "ru": "ь"
@@ -252,7 +252,7 @@
         "style": "primary"
     },
     {
-        "id": ",",
+        "id": "Comma",
         "layers": {
             "en": ",",
             "ru": "б"
@@ -260,7 +260,7 @@
         "style": "primary"
     },
     {
-        "id": ".",
+        "id": "Period",
         "layers": {
             "en": ".",
             "ru": "ю"
@@ -268,7 +268,7 @@
         "style": "primary"
     },
     {
-        "id": "/",
+        "id": "Slash",
         "layers": {
             "en": "/",
             "ru": "."
@@ -276,7 +276,7 @@
         "style": "primary"
     },
     {
-        "id": "enter",
+        "id": "Enter",
         "layers": {
             "en": "enter"
         },
@@ -290,21 +290,21 @@
         "style": "secondary"
     },
     {
-        "id": "control",
+        "id": "ControlLeft",
         "layers": {
             "en": "ctrl"
         },
         "style": "secondary"
     },
     {
-        "id": "option",
+        "id": "AltLeft",
         "layers": {
             "en": "opt"
         },
         "style": "secondary"
     },
     {
-        "id": "command",
+        "id": "MetaLeft",
         "layers": {
             "en": "cmd"
         },
@@ -318,14 +318,14 @@
         "style": "secondary"
     },
     {
-        "id": "space",
+        "id": "Space",
         "layers": {
             "en": ""
         },
         "style": "primary"
     },
     {
-        "id": "space",
+        "id": "Space",
         "layers": {
             "en": ""
         },
@@ -339,28 +339,28 @@
         "style": "secondary"
     },
     {
-        "id": "left",
+        "id": "ArrowLeft",
         "layers": {
             "en": "⬅️"
         },
         "style": "secondary"
     },
     {
-        "id": "down",
+        "id": "ArrowDown",
         "layers": {
             "en": "🔽"
         },
         "style": "secondary"
     },
     {
-        "id": "up",
+        "id": "ArrowUp",
         "layers": {
             "en": "🔼"
         },
         "style": "secondary"
     },
     {
-        "id": "right",
+        "id": "ArrowRight",
         "layers": {
             "en": "➡️"
         },
