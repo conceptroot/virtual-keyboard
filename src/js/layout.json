@@ -283,9 +283,9 @@
         "style": "secondary"
     },
     {
-        "id": "fn",
+        "id": "Lang",
         "layers": {
-            "en": "fn"
+            "en": "lang"
         },
         "style": "secondary"
     },

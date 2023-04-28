@@ -7,4 +7,7 @@ window.onload = async () => {
     document.body.addEventListener('keydown', e => {
         console.log(e)
     })
+    document.body.addEventListener('change_lang', e => {
+        console.log('Меняем раскладку клавы')
+    })
 }

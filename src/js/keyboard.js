@@ -5,6 +5,7 @@ export class Keyboard {
     constructor() {
         this.keys = []
         this.html = null
+        this.lang = 'ru' 
 
         this.init()
         // console.log('#keys:', this.keys)
@@ -13,6 +14,18 @@ export class Keyboard {
     init() {
         this.createElement()
         this.createKeyboard()
+        this.initEventListeners()
+    }
+    initEventListeners() {
+        document.body.addEventListener('change_lang', e => {
+            this.updateKeyTexts()
+        })
+    }
+    updateKeyTexts() {
+        this.lang = (this.lang === 'en') ? 'ru' : 'en'
+        for (let key of this.keys) {
+            key.updateKeyModifiers( this.lang, false )
+        }
     }
 
     createElement() {
@@ -24,7 +37,7 @@ export class Keyboard {
 
     createKeyboard() {
         for (let key_data of data) {
-            const key = new Key(key_data)
+            const key = new Key(key_data, this.lang)
             this.keys.push(key)
             this.html.append(key.html)
         }
