@@ -1,7 +1,7 @@
-import { Keyboard } from "./js/keyboard"
-import { Textarea } from "./js/textarea"
+import createKeyboard from './js/keyboard';
+import createTextarea from './js/textarea';
 
 window.onload = async () => {
-    new Textarea()
-    new Keyboard()
-}
+  createTextarea();
+  createKeyboard();
+};
