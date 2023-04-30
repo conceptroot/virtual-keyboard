@@ -1,5 +1,6 @@
 import { Key } from "./key";
-import data from './keys.json'
+import key_appearance from './key_apperance.json'
+import key_values_list from './key_values.json'
 
 export class Keyboard {
     constructor() {
@@ -54,7 +55,7 @@ export class Keyboard {
         console.log('inside updateKeyTexts. Lang:', this.lang, ' Shifted:', this.shifted)
         for (let key of this.keys) {
             if (key.isPrintableKey()) {
-                key.updateKeyModifiers( this.lang, this.shifted )
+                key.updateKeyText( this.lang, this.shifted )
             }
         }
     }
@@ -67,8 +68,10 @@ export class Keyboard {
     }
 
     createKeyboard() {
-        for (let key_data of data) {
-            const key = new Key(key_data, this.lang, this.shifted)
+        for (let key_data of key_appearance) {
+            const key_values = key_values_list.filter(e => e.id === key_data.id)[0].lang
+            console.log('key_values:', key_values)
+            const key = new Key(key_data, key_values ,this.lang, this.shifted)
             this.keys.push(key)
             this.html.append(key.html)
         }

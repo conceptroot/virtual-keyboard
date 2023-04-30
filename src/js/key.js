@@ -1,7 +1,8 @@
 export class Key {
-    constructor (key_config, lang, shifted=false) {
+    constructor (key_config, key_values, lang, shifted=false) {
         this.id = key_config.id
         this.layers = key_config.layers // dict
+        this.key_values = key_values
         this.lang = lang  // ru, en
         this.style = key_config.style // primary, secondary
         this.html = null
@@ -40,18 +41,10 @@ export class Key {
         return false
     }
     // Обновляет текст на кнопке
-    updateKeyModifiers(lang, shifted) {
+    updateKeyText(lang, shifted) {
         this.lang = lang
         this.shifted = shifted
-        let symbol
-        if (this.layers[lang]) { // есть ли в лэйауте нужный слой
-            symbol = this.layers[lang]
-        } else { // если слоя нет, то возвращаем символ английской раскладки
-            symbol = this.layers['en']
-        }
-        if (this.shifted) {
-            symbol = symbol.toUpperCase()
-        }
+        const symbol = this.getSymbol()
         this.html.textContent = symbol
     }
     // Визуализация и анимация клика кнопки
@@ -69,29 +62,38 @@ export class Key {
     renderPressUp() {
         this.html.classList.remove('key_press')
     }
+    // Получить symbol для отрисовки на кнопке и для отправки ивента в текстарею
     // Запуск кастомного ивента нажата кнопка
-    emitVirtualPressEvent(){
-        console.log('🔥 Запускаю виртуальный ивент для кнопки:', this.id)
-        let key
-        if (this.id.startsWith('Key')) {
-            if (this.lang === 'en') {
-                key = this.layers['en']
-            } else if (this.lang === 'ru') {
-                key = this.layers['ru']
-            } else {
-                key = 'ошибка'
+    getSymbol() {
+        let symbols, symbol
+        try {
+            if (this.key_values[this.lang]) { // есть ли в лэйауте нужный слой
+                symbols = this.key_values[this.lang]
+            } else { // если слоя нет, то возвращаем символ английской раскладки
+                symbols = this.key_values['en']
             }
             if (this.shifted) {
-                key = key.toUpperCase()
+                symbol = symbols[1] || symbols[0] 
+            } else {
+                symbol = symbols[0]
             }
         }
+        catch (e) {
+            symbol = "💩"
+            console.warn('В файле key_apperance.json не определены значения для:', this.id)
+        }
+        return symbol
+    }
+    emitVirtualPressEvent(){
+        console.log('🔥 Запускаю виртуальный ивент для кнопки:', this.id)
+        const symbol = this.getSymbol()
         const virtual_kb_press_event = new CustomEvent(
             "virtual_kb_press", 
             {
                 bubbles: true,
                 detail: {
                     id: this.id,
-                    key: key
+                    symbol: symbol
                 }
             })
         this.html.dispatchEvent(virtual_kb_press_event)
@@ -218,11 +220,9 @@ export class Key {
             key.classList.add('key_invisible')
         }
         this.html = key
-        if (this.layers[this.lang]) {
-            this.html.textContent = this.layers[this.lang]
-        } else {
-            this.html.textContent = this.layers['en']
-        }
+
+        // отрисовать на кнопке символ
+        this.updateKeyText(this.lang, this.shifted)
     }
 }
 
