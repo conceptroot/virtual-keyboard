@@ -6,7 +6,8 @@ export class Keyboard {
     constructor() {
         this.keys = []
         this.html = null
-        this.lang = 'ru' 
+        this.htmlLines = []
+        this.lang = 'en' 
         this.shifted = false
 
         this.init()
@@ -65,15 +66,29 @@ export class Keyboard {
         keyboard.classList.add('keyboard')
         document.querySelector('body').append(keyboard)
         this.html = keyboard
+        this.createLine()
+    }
+    createLine() {
+        const line = document.createElement('div')
+        line.classList.add('keyboard__line')
+        this.htmlLines.push(line)
+        this.html.append(line)
+        return line
     }
 
     createKeyboard() {
+
         for (let key_data of key_appearance) {
+            if (key_data.id === "nextline") {
+                this.createLine()
+                continue
+            }
             const key_values = key_values_list.filter(e => e.id === key_data.id)[0].lang
             // console.log('key_values:', key_values)
             const key = new Key(key_data, key_values ,this.lang, this.shifted)
             this.keys.push(key)
-            this.html.append(key.html)
+            // this.html.append(key.html)
+            console.log(this.htmlLines.slice(-1)[0].append(key.html))
         }
     }
 }

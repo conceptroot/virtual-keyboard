@@ -23,6 +23,9 @@
         "id": "Digit5",
         "style": "primary"
     },
+    
+    { "id": "nextline" },
+    
     {
         "id": "Digit6",
         "style": "primary"
@@ -48,6 +51,8 @@
         "style": "secondary"
     },
 
+
+    { "id": "nextline" },
 
 
 
@@ -76,6 +81,9 @@
         "id": "KeyT",
         "style": "primary"
     },
+
+    { "id": "nextline" },
+
     {
         "id": "KeyY",
         "style": "primary"
@@ -100,6 +108,11 @@
         "id": "Backspace",
         "style": "secondary"
     },
+    
+
+    { "id": "nextline" },
+
+    
     {
         "id": "Escape",
         "style": "secondary"
@@ -124,6 +137,9 @@
         "id": "KeyG",
         "style": "primary"
     },
+
+    { "id": "nextline" },
+
     {
         "id": "KeyH",
         "style": "primary"
@@ -148,6 +164,11 @@
         "id": "Quote",
         "style": "primary"
     },
+    
+
+    { "id": "nextline" },
+
+    
     {
         "id": "ShiftLeft",
         "style": "secondary"
@@ -172,6 +193,9 @@
         "id": "KeyB",
         "style": "primary"
     },
+
+    { "id": "nextline" },
+
     {
         "id": "KeyN",
         "style": "primary"
@@ -196,6 +220,9 @@
         "id": "Enter",
         "style": "secondary"
     },
+
+    { "id": "nextline" },
+
     {
         "id": "Lang",
         "style": "secondary"
@@ -220,6 +247,9 @@
         "id": "Space",
         "style": "primary"
     },
+
+    { "id": "nextline" },
+
     {
         "id": "Space",
         "style": "primary"
