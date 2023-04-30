@@ -7,7 +7,7 @@ export class Keyboard {
         this.keys = []
         this.html = null
         this.htmlLines = []
-        this.lang = 'en' 
+        this.lang = localStorage.getItem("keyboard_language") || 'en'
         this.shifted = false
 
         this.init()
@@ -39,6 +39,7 @@ export class Keyboard {
         document.body.addEventListener('change_lang', e => {
             console.log('====> Keyboard отловила смену языка')
             this.lang = (this.lang === 'en') ? 'ru' : 'en'
+            localStorage.setItem('keyboard_language', this.lang)
             this.updateKeyTexts()
         })
         document.body.addEventListener('shift_event', e => {
