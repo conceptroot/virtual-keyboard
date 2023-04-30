@@ -14,6 +14,25 @@ export class Key {
         this.initEventlistners()
     }
 
+    isControlKey() {
+        const controlKeys = [
+            "ControlLeft",
+            "ControlRight",
+            "AltLeft",
+            "AltRight",
+            "MetaLeft",
+            "MetaRight",
+            "Escape",
+            "Tab",
+            "Delete",
+            "ArrowUp",
+            "ArrowDown",
+            "ArrowLeft",
+            "ArrowRight"
+        ]
+        if (controlKeys.indexOf(this.id) !== -1) return true
+        return false
+    }
     isPrintableKey() {
         if (this.id.startsWith('Key')) return true
         if (this.id.startsWith('Digit')) return true
@@ -31,7 +50,7 @@ export class Key {
         const editKeys = [
             "Enter",
             "Space", 
-            "Backspace"
+            "Backspace",
         ]
         if (editKeys.indexOf(this.id) !== -1) return true
         return false
@@ -169,6 +188,10 @@ export class Key {
             this.renderPressDown()
             return
         }
+        // проверка что служебные кнопки
+        if (this.isControlKey()) {
+            this.renderPress()
+        }
 
     }
     // Листнер для кнопки смены языка
@@ -189,9 +212,23 @@ export class Key {
     // листнер для обычных кккнопок, энтер, пробел бэкспэйс
     addEventListenerCommonKeys() {
         this.html.addEventListener('click', e => {
-            this.emitVirtualPressEvent()
-            this.renderPress()
-            console.log('кликнутая кнопка совпала с объектом Key:', this.id)
+            // проверка что обычная кнопка
+            if (this.isPrintableKey() || this.isEditKey()) { 
+                this.emitVirtualPressEvent()
+                this.renderPress()
+                return
+            } 
+            // проверка что шифт нажали
+            if (this.isShiftKey()) { 
+                console.log('Это шифт нажат!!!', this.id, this.shifted)
+                this.renderPressDown()
+                this.emitShiftEvent()
+                setTimeout(e => {
+                    this.renderPressUp()
+                    this.emitUnshiftEvent()
+                }, 2000)
+                return
+            }
         })
     }
     // Инициализация листнеров для Кнопок, реагирует на клик мыши
