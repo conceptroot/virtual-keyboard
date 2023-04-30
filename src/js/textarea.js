@@ -10,7 +10,7 @@ export class Textarea {
     }
     initEventListeners() {
         document.body.addEventListener('virtual_kb_press', e => {
-            console.log('!!!! Textare отлавил:', e)
+            console.log('----> Textarea отловил:', e)
             if (e.detail.id === 'Backspace') {
                 this.html.textContent = this.html.textContent.slice(0,-1)
             } else if (e.detail.id === 'Enter') {

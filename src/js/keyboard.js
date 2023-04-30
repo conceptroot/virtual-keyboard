@@ -23,7 +23,7 @@ export class Keyboard {
         document.body.addEventListener('keydown', e => {
             console.log('====> Keyboard отловила нажатие кнопки. Нажата e.code:', e.code, e)
             const keys = this.keys.filter(key => e.code === key.id)
-            console.log( "Нашли кнопки:", keys)
+            // console.log( "Нашли кнопки:", keys)
             if (keys.length === 0) return
             // TODO продумать как быть с одинаковыми клавишами на клавиатуре
             keys[0].emitAndRenderKeyDown()
@@ -55,9 +55,9 @@ export class Keyboard {
     updateKeyTexts() {
         console.log('inside updateKeyTexts. Lang:', this.lang, ' Shifted:', this.shifted)
         for (let key of this.keys) {
-            if (key.isPrintableKey()) {
+            // if (key.isPrintableKey()) {
                 key.updateKeyText( this.lang, this.shifted )
-            }
+            // }
         }
     }
 
@@ -88,7 +88,7 @@ export class Keyboard {
             const key = new Key(key_data, key_values ,this.lang, this.shifted)
             this.keys.push(key)
             // this.html.append(key.html)
-            console.log(this.htmlLines.slice(-1)[0].append(key.html))
+            this.htmlLines.slice(-1)[0].append(key.html)
         }
     }
 }

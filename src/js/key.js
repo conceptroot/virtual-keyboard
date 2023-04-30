@@ -14,6 +14,10 @@ export class Key {
         this.initEventlistners()
     }
 
+    isCapsKey() {
+        if (this.id === "CapsLock") return true
+        return false
+    }
     isControlKey() {
         const controlKeys = [
             "ControlLeft",
@@ -105,7 +109,7 @@ export class Key {
         return symbol
     }
     emitVirtualPressEvent(){
-        console.log('🔥 Запускаю виртуальный ивент для кнопки:', this.id)
+        console.log('🔥🔥🔥 Запускаю виртуальный ивент для кнопки:', this.id)
         const symbol = this.getSymbol()
         const virtual_kb_press_event = new CustomEvent(
             "virtual_kb_press", 
@@ -155,7 +159,6 @@ export class Key {
             })
         this.html.dispatchEvent(virtual_unshift_event)
     }
-
     // Для физических отжатий клавиатуру
     // Вызов происходит из класса Keyboard
     emitAndRenderKeyUp() {
@@ -167,14 +170,10 @@ export class Key {
             return
         }
     }
-    
     // Для физических нажатий на клавиатуру
     // Вызов происходит из класса Keyboard
     emitAndRenderKeyDown() {
         console.log("~~~~> emitAndRenderKey. this.id", this.id )
-        console.log("~~~~> emitAndRenderKey. isPrintable?", this.isPrintableKey() )
-        console.log("~~~~> emitAndRenderKey. isEditKey?", this.isEditKey() )
-        console.log("~~~~> emitAndRenderKey. isShift?", this.isShiftKey() )
         // проверка что обычная кнопка
         if (this.isPrintableKey() || this.isEditKey()) { 
             this.emitVirtualPressEvent()
@@ -188,25 +187,50 @@ export class Key {
             this.renderPressDown()
             return
         }
+        if (this.isCapsKey()) {
+            if (this.shifted) {
+                this.emitUnshiftEvent()
+                this.renderPressUp()
+                console.log('this.shifted remove ------>')
+                return
+            }
+            this.emitShiftEvent()
+            this.renderPressDown()
+            return
+        }
+
         // проверка что служебные кнопки
         if (this.isControlKey()) {
             this.renderPress()
+            return
         }
 
     }
-    // Листнер для кнопки смены языка
+    // Листнер для клика кнопки смены языка
     addEventListnerLanguage() {
         this.html.addEventListener('click', (e) => {
             this.emitChangeLangEvent()
             this.renderPress()
         })
     }
-    // Листнер для шифта
+    // Листнер для клика шифта
     addEventListenerShift() {
-        console.log('this.id====>>>>>', this.id)
         this.html.addEventListener("click", e => {
             console.log("press shift")
             this.renderPress()
+        })
+    }
+    // Листнер для клика на капс 
+    addEventListenerCaps() {
+        this.html.addEventListener("click", e => {
+            if (this.shifted) {
+                this.emitUnshiftEvent()
+                this.renderPressUp()
+                return
+            }
+            this.emitShiftEvent()
+            this.renderPressDown()
+            return
         })
     }
     // листнер для обычных кккнопок, энтер, пробел бэкспэйс
@@ -241,6 +265,10 @@ export class Key {
         // обработчики для шифта
         if (this.id === "ShiftLeft" || this.id === "ShiftRight") {
             this.addEventListenerShift()
+        }
+        // обработчик для капса
+        if (this.isCapsKey()) {
+            this.addEventListenerCaps()
         }
         // обработчики для остальных кнопок
         this.addEventListenerCommonKeys()

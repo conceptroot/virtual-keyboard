@@ -1,8 +1,8 @@
 [
     {
-        "id": "Escape",
+        "id": "CapsLock",
         "lang": {
-            "en": ["Esc"]
+            "en": ["Caps"]
         }
     },
     {
@@ -172,7 +172,7 @@
     {
         "id": "Escape",
         "lang": {
-            "en": "Esc"
+            "en": ["Esc"]
         }
     },
     {
