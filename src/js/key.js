@@ -216,9 +216,16 @@ export class Key {
     // Листнер для клика шифта
     addEventListenerShift() {
         this.html.addEventListener("click", e => {
-            console.log("press shift")
-            this.renderPress()
+            console.log('Это шифт нажат!!!', this.id, this.shifted)
+            this.renderPressDown()
+            this.emitShiftEvent()
+            setTimeout(e => {
+                this.renderPressUp()
+                this.emitUnshiftEvent()
+            }, 2000)
+            return
         })
+
     }
     // Листнер для клика на капс 
     addEventListenerCaps() {
@@ -236,23 +243,12 @@ export class Key {
     // листнер для обычных кккнопок, энтер, пробел бэкспэйс
     addEventListenerCommonKeys() {
         this.html.addEventListener('click', e => {
+            this.renderPress()
             // проверка что обычная кнопка
             if (this.isPrintableKey() || this.isEditKey()) { 
                 this.emitVirtualPressEvent()
-                this.renderPress()
                 return
             } 
-            // проверка что шифт нажали
-            if (this.isShiftKey()) { 
-                console.log('Это шифт нажат!!!', this.id, this.shifted)
-                this.renderPressDown()
-                this.emitShiftEvent()
-                setTimeout(e => {
-                    this.renderPressUp()
-                    this.emitUnshiftEvent()
-                }, 2000)
-                return
-            }
         })
     }
     // Инициализация листнеров для Кнопок, реагирует на клик мыши
@@ -263,7 +259,7 @@ export class Key {
             return
         }
         // обработчики для шифта
-        if (this.id === "ShiftLeft" || this.id === "ShiftRight") {
+        if (this.isShiftKey()){ //this.id === "ShiftLeft" || this.id === "ShiftRight") {
             this.addEventListenerShift()
         }
         // обработчик для капса
@@ -271,7 +267,9 @@ export class Key {
             this.addEventListenerCaps()
         }
         // обработчики для остальных кнопок
-        this.addEventListenerCommonKeys()
+        if (this.isControlKey() || this.isPrintableKey() || this.isEditKey()){
+            this.addEventListenerCommonKeys()
+        }
     }
 
     createElement() {
