@@ -1,376 +1,251 @@
 [
     {
+        "id": "Escape",
+        "style": "secondary"
+    },
+    {
+        "id": "Digit1",
+        "style": "primary"
+    },
+    {
+        "id": "Digit2",
+        "style": "primary"
+    },
+    {
+        "id": "Digit3",
+        "style": "primary"
+    },
+    {
+        "id": "Digit4",
+        "style": "primary"
+    },
+    {
+        "id": "Digit5",
+        "style": "primary"
+    },
+    {
+        "id": "Digit6",
+        "style": "primary"
+    },
+    {
+        "id": "Digit7",
+        "style": "primary"
+    },
+    {
+        "id": "Digit8",
+        "style": "primary"
+    },
+    {
+        "id": "Digit9",
+        "style": "primary"
+    },
+    {
+        "id": "Digit0",
+        "style": "primary"
+    },
+    {
+        "id": "Delete",
+        "style": "secondary"
+    },
+
+
+
+
+
+    {
         "id": "Tab",
-        "layers": {
-            "en": "tab"
-        },
         "style": "secondary"
     },
     {
         "id": "KeyQ",
-        "layers": {
-            "en": "q",
-            "ru": "й"
-        },
         "style": "primary"
     },
     {
         "id": "KeyW",
-        "layers": {
-            "en": "w",
-            "ru": "ц"
-        },
         "style": "primary"
     },
     {
         "id": "KeyE",
-        "layers": {
-            "en": "e",
-            "ru": "у"
-        },
         "style": "primary"
     },
     {
         "id": "KeyR",
-        "layers": {
-            "en": "r",
-            "ru": "к"
-        },
         "style": "primary"
     },
     {
         "id": "KeyT",
-        "layers": {
-            "en": "t",
-            "ru": "е"
-        },
         "style": "primary"
     },
     {
         "id": "KeyY",
-        "layers": {
-            "en": "y",
-            "ru": "н"
-        },
         "style": "primary"
     },
     {
         "id": "KeyU",
-        "layers": {
-            "en": "u",
-            "ru": "г"
-        },
         "style": "primary"
     },
     {
         "id": "KeyI",
-        "layers": {
-            "en": "i",
-            "ru": "ш"
-        },
         "style": "primary"
     },
     {
         "id": "KeyO",
-        "layers": {
-            "en": "o",
-            "ru": "щ"
-        },
         "style": "primary"
     },
     {
         "id": "KeyP",
-        "layers": {
-            "en": "p",
-            "ru": "з"
-        },
         "style": "primary"
     },
     {
         "id": "Backspace",
-        "layers": {
-            "en": "<-"
-        },
         "style": "secondary"
     },
     {
         "id": "Escape",
-        "layers": {
-            "en": "esc"
-        },
         "style": "secondary"
     },
     {
         "id": "KeyA",
-        "layers": {
-            "en": "a",
-            "ru": "ф"
-        },
         "style": "primary"
     },
     {
         "id": "KeyS",
-        "layers": {
-            "en": "s",
-            "ru": "ы"
-        },
         "style": "primary"
     },
     {
         "id": "KeyD",
-        "layers": {
-            "en": "d",
-            "ru": "в"
-        },
         "style": "primary"
     },
     {
         "id": "KeyF",
-        "layers": {
-            "en": "f",
-            "ru": "а"
-        },
         "style": "primary"
     },
     {
         "id": "KeyG",
-        "layers": {
-            "en": "g",
-            "ru": "п"
-        },
         "style": "primary"
     },
     {
         "id": "KeyH",
-        "layers": {
-            "en": "h",
-            "ru": "р"
-        },
         "style": "primary"
     },
     {
         "id": "KeyJ",
-        "layers": {
-            "en": "j",
-            "ru": "о"
-        },
         "style": "primary"
     },
     {
         "id": "KeyK",
-        "layers": {
-            "en": "k",
-            "ru": "л"
-        },
         "style": "primary"
     },
     {
         "id": "KeyL",
-        "layers": {
-            "en": "l",
-            "ru": "д"
-        },
         "style": "primary"
     },
     {
         "id": "Semicolon",
-        "layers": {
-            "en": ";",
-            "ru": "ж"
-        },
         "style": "primary"
     },
     {
         "id": "Quote",
-        "layers": {
-            "en": "'",
-            "ru": "э"
-        },
         "style": "primary"
     },
     {
         "id": "ShiftLeft",
-        "layers": {
-            "en": "shift"
-        },
         "style": "secondary"
     },
     {
         "id": "KeyZ",
-        "layers": {
-            "en": "z",
-            "ru": "я"
-        },
         "style": "primary"
     },
     {
         "id": "KeyX",
-        "layers": {
-            "en": "x",
-            "ru": "ч"
-        },
         "style": "primary"
     },
     {
         "id": "KeyC",
-        "layers": {
-            "en": "c",
-            "ru": "с"
-        },
         "style": "primary"
     },
     {
         "id": "KeyV",
-        "layers": {
-            "en": "v",
-            "ru": "м"
-        },
         "style": "primary"
     },
     {
         "id": "KeyB",
-        "layers": {
-            "en": "b",
-            "ru": "и"
-        },
         "style": "primary"
     },
     {
         "id": "KeyN",
-        "layers": {
-            "en": "n",
-            "ru": "т"
-        },
         "style": "primary"
     },
     {
         "id": "KeyM",
-        "layers": {
-            "en": "m",
-            "ru": "ь"
-        },
         "style": "primary"
     },
     {
         "id": "Comma",
-        "layers": {
-            "en": ",",
-            "ru": "б"
-        },
         "style": "primary"
     },
     {
         "id": "Period",
-        "layers": {
-            "en": ".",
-            "ru": "ю"
-        },
         "style": "primary"
     },
     {
         "id": "Slash",
-        "layers": {
-            "en": "/",
-            "ru": "."
-        },
         "style": "primary"
     },
     {
         "id": "Enter",
-        "layers": {
-            "en": "enter"
-        },
         "style": "secondary"
     },
     {
         "id": "Lang",
-        "layers": {
-            "en": "lang"
-        },
         "style": "secondary"
     },
     {
         "id": "ControlLeft",
-        "layers": {
-            "en": "ctrl"
-        },
         "style": "secondary"
     },
     {
         "id": "AltLeft",
-        "layers": {
-            "en": "opt"
-        },
         "style": "secondary"
     },
     {
         "id": "MetaLeft",
-        "layers": {
-            "en": "cmd"
-        },
         "style": "secondary"
     },
     {
         "id": "fn",
-        "layers": {
-            "en": "fn"
-        },
         "style": "secondary"
     },
     {
         "id": "Space",
-        "layers": {
-            "en": ""
-        },
         "style": "primary"
     },
     {
         "id": "Space",
-        "layers": {
-            "en": ""
-        },
         "style": "primary"
     },
     {
         "id": "fn",
-        "layers": {
-            "en": "fn"
-        },
         "style": "secondary"
     },
     {
         "id": "ArrowLeft",
-        "layers": {
-            "en": "⬅️"
-        },
         "style": "secondary"
     },
     {
         "id": "ArrowDown",
-        "layers": {
-            "en": "🔽"
-        },
         "style": "secondary"
     },
     {
         "id": "ArrowUp",
-        "layers": {
-            "en": "🔼"
-        },
         "style": "secondary"
     },
     {
         "id": "ArrowRight",
-        "layers": {
-            "en": "➡️"
-        },
         "style": "secondary"
     },
     {
         "id": "ShiftRight",
-        "layers": {
-            "en": "rShift"
-        },
         "style": "invisible"
     }
 ]

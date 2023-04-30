@@ -16,6 +16,7 @@ export class Key {
 
     isPrintableKey() {
         if (this.id.startsWith('Key')) return true
+        if (this.id.startsWith('Digit')) return true
         const printKeys = [
             "Quote",
             "Period",

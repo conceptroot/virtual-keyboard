@@ -17,13 +17,8 @@ export class Textarea {
                 this.html.textContent += '\n'
             } else if (e.detail.id === 'Space') {
                 this.html.textContent += ' '
-            } else if (e.detail.id.startsWith('Key')) {
+            } else {
                 this.html.textContent += e.detail.symbol 
-            }
-            else {
-                console.log('🛑 Не попали. Кнопка не попала в обработчик textarea:', e.detail)
-                this.html.textContent += e.detail.key 
-
             }
         })
 

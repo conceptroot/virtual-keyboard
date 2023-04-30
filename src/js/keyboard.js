@@ -7,7 +7,7 @@ export class Keyboard {
         this.keys = []
         this.html = null
         this.lang = 'ru' 
-        this.shifted = true
+        this.shifted = false
 
         this.init()
         // console.log('#keys:', this.keys)
@@ -28,7 +28,7 @@ export class Keyboard {
             keys[0].emitAndRenderKeyDown()
         })
         document.body.addEventListener('keyup', e => {
-            console.log('====> Keyboard отловила отжатие кнопки. Нажата e.code:', e.code)
+            // console.log('====> Keyboard отловила отжатие кнопки. Нажата e.code:', e.code)
             const keys = this.keys.filter(key => e.code === key.id)
             console.log( "Нашли кнопки:", keys)
             if (keys.length === 0) return
@@ -70,7 +70,7 @@ export class Keyboard {
     createKeyboard() {
         for (let key_data of key_appearance) {
             const key_values = key_values_list.filter(e => e.id === key_data.id)[0].lang
-            console.log('key_values:', key_values)
+            // console.log('key_values:', key_values)
             const key = new Key(key_data, key_values ,this.lang, this.shifted)
             this.keys.push(key)
             this.html.append(key.html)
