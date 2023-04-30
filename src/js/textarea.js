@@ -20,7 +20,7 @@ export class Textarea {
                 this.html.textContent += e.detail.key 
             }
             else {
-                console.log('Не попали:', e.detail)
+                console.log('🛑 Не попали. Кнопка не попала в обработчик textarea:', e.detail)
             }
         })
 

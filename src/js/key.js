@@ -34,6 +34,7 @@ export class Key {
     }
     // Запуск кастомного ивента нажата кнопка
     emitVirtualPressEvent(){
+        console.log('🔥 Запускаю виртуальный ивент для кнопки:', this.id)
         let key
         if (this.id.startsWith('Key')) {
             if (this.lang === 'en') {
@@ -47,7 +48,6 @@ export class Key {
                 key = key.toUpperCase()
             }
         }
-
         const virtual_kb_press_event = new CustomEvent(
             "virtual_kb_press", 
             {
@@ -72,20 +72,33 @@ export class Key {
         this.html.dispatchEvent(change_lang_event)
         
     }
+    // Инициализация листнеров для Кнопок
     initEventlistners() {
-        this.html.addEventListener('click', (e) => {
-            if (this.id === "Lang") { this.emitChangeLangEvent() }
-            else { this.emitVirtualPressEvent() }
+        if (this.id === "Lang") { 
+            this.html.addEventListener('click', (e) => {
+                this.emitChangeLangEvent()
+                this.renderPress()
+            })
+            return
+        }
+
+        this.html.addEventListener('click', e => {
+            console.log('я тута')
+            // if (this.id !== e.code) return
+            this.emitVirtualPressEvent()
             this.renderPress()
-            // console.log(this)
+            console.log('кликнутая кнопка совпала с объектом Key:', this.id)
+            
         })
         document.body.addEventListener('keydown', e => {
             if (this.id !== e.code) return
             this.emitVirtualPressEvent()
             this.renderPress()
-            // console.log(this)
+            console.log('нажата кнопка совпала с объектом Key:', this.id)
         })
+        
     }
+
     createElement() {
         const key = document.createElement('div')
         key.setAttribute('id', this.id)
