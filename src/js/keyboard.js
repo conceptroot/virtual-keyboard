@@ -1,5 +1,5 @@
 import { Key } from "./key";
-import data from './layout.json'
+import data from './keys.json'
 
 export class Keyboard {
     constructor() {
