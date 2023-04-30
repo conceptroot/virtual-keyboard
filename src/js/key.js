@@ -2,7 +2,6 @@ export class Key {
     constructor (key_config, lang, shifted=false) {
         this.id = key_config.id
         this.layers = key_config.layers // dict
-        this.listner = "TODO"
         this.lang = lang  // ru, en
         this.style = key_config.style // primary, secondary
         this.html = null
@@ -14,6 +13,32 @@ export class Key {
         this.initEventlistners()
     }
 
+    isPrintableKey() {
+        if (this.id.startsWith('Key')) return true
+        const printKeys = [
+            "Quote",
+            "Period",
+            "Comma",
+            "Slash",
+            "Semicolon"
+        ]
+        if (printKeys.indexOf(this.id) !== -1) return true
+        return false
+    }
+    isEditKey() {
+        const editKeys = [
+            "Enter",
+            "Space", 
+            "Backspace"
+        ]
+        if (editKeys.indexOf(this.id) !== -1) return true
+        return false
+    }
+    isShiftKey() {
+        if (this.id === "ShiftLeft") return true
+        if (this.id === "ShiftRight") return true
+        return false
+    }
     // Обновляет текст на кнопке
     updateKeyModifiers(lang, shifted) {
         this.lang = lang
@@ -108,6 +133,41 @@ export class Key {
             })
         this.html.dispatchEvent(virtual_unshift_event)
     }
+
+    // Для физических отжатий клавиатуру
+    // Вызов происходит из класса Keyboard
+    emitAndRenderKeyUp() {
+        // проверка что шифт отжали
+        if (this.isShiftKey()) { 
+            console.log('Это шифт. Отжат!!!', this.id, this.shifted)
+            this.emitUnshiftEvent()
+            this.renderPressUp()
+            return
+        }
+    }
+    
+    // Для физических нажатий на клавиатуру
+    // Вызов происходит из класса Keyboard
+    emitAndRenderKeyDown() {
+        console.log("~~~~> emitAndRenderKey. this.id", this.id )
+        console.log("~~~~> emitAndRenderKey. isPrintable?", this.isPrintableKey() )
+        console.log("~~~~> emitAndRenderKey. isEditKey?", this.isEditKey() )
+        console.log("~~~~> emitAndRenderKey. isShift?", this.isShiftKey() )
+        // проверка что обычная кнопка
+        if (this.isPrintableKey() || this.isEditKey()) { 
+            this.emitVirtualPressEvent()
+            this.renderPress()
+            return
+        } 
+        // проверка что шифт нажали
+        if (this.isShiftKey()) { 
+            console.log('Это шифт нажат!!!', this.id, this.shifted)
+            this.emitShiftEvent()
+            this.renderPressDown()
+            return
+        }
+
+    }
     // Листнер для кнопки смены языка
     addEventListnerLanguage() {
         this.html.addEventListener('click', (e) => {
@@ -122,38 +182,16 @@ export class Key {
             console.log("press shift")
             this.renderPress()
         })
-        document.body.addEventListener('keydown', e => {
-            if (e.code !== "ShiftLeft" && e.code !=="ShiftRight") return
-            this.emitShiftEvent()
-            this.renderPressDown()
-            console.log("emiting shift press, e:", e)
-        })
-        document.body.addEventListener('keyup', e => {
-            if (e.code !== "ShiftLeft" && e.code !=="ShiftRight") return
-            this.emitUnshiftEvent()
-            this.renderPressUp()
-            console.log("emiting unshift press, e:", e)
-        })
     }
     // листнер для обычных кккнопок, энтер, пробел бэкспэйс
     addEventListenerCommonKeys() {
         this.html.addEventListener('click', e => {
-            console.log('я тута')
-            // if (this.id !== e.code) return
             this.emitVirtualPressEvent()
             this.renderPress()
             console.log('кликнутая кнопка совпала с объектом Key:', this.id)
-            
         })
-        document.body.addEventListener('keydown', e => {
-            if (this.id !== e.code) return
-            this.emitVirtualPressEvent()
-            this.renderPress()
-            console.log('нажата кнопка совпала с объектом Key:', this.id)
-        })
-        
     }
-    // Инициализация листнеров для Кнопок
+    // Инициализация листнеров для Кнопок, реагирует на клик мыши
     initEventlistners() {
         // обработчик для переключения языка
         if (this.id === "Lang") { 
@@ -164,11 +202,9 @@ export class Key {
         if (this.id === "ShiftLeft" || this.id === "ShiftRight") {
             this.addEventListenerShift()
         }
-
         // обработчики для остальных кнопок
         this.addEventListenerCommonKeys()
     }
-
 
     createElement() {
         const key = document.createElement('div')
@@ -178,6 +214,8 @@ export class Key {
             key.classList.add('key_primary')
         } else if (this.style === 'secondary') {
             key.classList.add('key_secondary')
+        } else if (this.style === 'invisible') {
+            key.classList.add('key_invisible')
         }
         this.html = key
         if (this.layers[this.lang]) {

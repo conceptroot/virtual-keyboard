@@ -18,7 +18,24 @@ export class Keyboard {
         this.initEventListeners()
     }
     initEventListeners() {
+        document.body.addEventListener('keydown', e => {
+            console.log('====> Keyboard отловила нажатие кнопки. Нажата e.code:', e.code, e)
+            const keys = this.keys.filter(key => e.code === key.id)
+            console.log( "Нашли кнопки:", keys)
+            if (keys.length === 0) return
+            // TODO продумать как быть с одинаковыми клавишами на клавиатуре
+            keys[0].emitAndRenderKeyDown()
+        })
+        document.body.addEventListener('keyup', e => {
+            console.log('====> Keyboard отловила отжатие кнопки. Нажата e.code:', e.code)
+            const keys = this.keys.filter(key => e.code === key.id)
+            console.log( "Нашли кнопки:", keys)
+            if (keys.length === 0) return
+            // TODO продумать как быть с одинаковыми клавишами на клавиатуре
+            keys[0].emitAndRenderKeyUp()
+        })
         document.body.addEventListener('change_lang', e => {
+            console.log('====> Keyboard отловила смену языка')
             this.lang = (this.lang === 'en') ? 'ru' : 'en'
             this.updateKeyTexts()
         })
@@ -36,7 +53,9 @@ export class Keyboard {
     updateKeyTexts() {
         console.log('inside updateKeyTexts. Lang:', this.lang, ' Shifted:', this.shifted)
         for (let key of this.keys) {
-            key.updateKeyModifiers( this.lang, this.shifted )
+            if (key.isPrintableKey()) {
+                key.updateKeyModifiers( this.lang, this.shifted )
+            }
         }
     }
 
