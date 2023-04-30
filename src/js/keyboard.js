@@ -6,6 +6,7 @@ export class Keyboard {
         this.keys = []
         this.html = null
         this.lang = 'ru' 
+        this.shifted = true
 
         this.init()
         // console.log('#keys:', this.keys)
@@ -18,13 +19,24 @@ export class Keyboard {
     }
     initEventListeners() {
         document.body.addEventListener('change_lang', e => {
+            this.lang = (this.lang === 'en') ? 'ru' : 'en'
+            this.updateKeyTexts()
+        })
+        document.body.addEventListener('shift_event', e => {
+            console.log('====> Keyboard отловила включение шифта')
+            this.shifted = true
+            this.updateKeyTexts()
+        })
+        document.body.addEventListener('unshift_event', e => {
+            console.log('====> Keyboard отловила выключение шифта')
+            this.shifted = false
             this.updateKeyTexts()
         })
     }
     updateKeyTexts() {
-        this.lang = (this.lang === 'en') ? 'ru' : 'en'
+        console.log('inside updateKeyTexts. Lang:', this.lang, ' Shifted:', this.shifted)
         for (let key of this.keys) {
-            key.updateKeyModifiers( this.lang, false )
+            key.updateKeyModifiers( this.lang, this.shifted )
         }
     }
 
@@ -37,7 +49,7 @@ export class Keyboard {
 
     createKeyboard() {
         for (let key_data of data) {
-            const key = new Key(key_data, this.lang)
+            const key = new Key(key_data, this.lang, this.shifted)
             this.keys.push(key)
             this.html.append(key.html)
         }
