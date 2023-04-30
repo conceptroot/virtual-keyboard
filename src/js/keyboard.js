@@ -21,7 +21,7 @@ export class Keyboard {
     }
     initEventListeners() {
         document.body.addEventListener('keydown', e => {
-            console.log('====> Keyboard отловила нажатие кнопки. Нажата e.code:', e.code, e)
+            console.log('====> Keyboard отловила нажатие кнопки. Нажата e.code:', e.code)
             const keys = this.keys.filter(key => e.code === key.id)
             // console.log( "Нашли кнопки:", keys)
             if (keys.length === 0) return
@@ -31,7 +31,7 @@ export class Keyboard {
         document.body.addEventListener('keyup', e => {
             // console.log('====> Keyboard отловила отжатие кнопки. Нажата e.code:', e.code)
             const keys = this.keys.filter(key => e.code === key.id)
-            console.log( "Нашли кнопки:", keys)
+            // console.log( "Нашли кнопки:", keys)
             if (keys.length === 0) return
             // TODO продумать как быть с одинаковыми клавишами на клавиатуре
             keys[0].emitAndRenderKeyUp()
