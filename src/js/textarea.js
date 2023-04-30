@@ -29,6 +29,7 @@ export class Textarea {
         textarea.classList.add('textarea')
         textarea.setAttribute('id', 'textarea')
         textarea.setAttribute('name', 'textarea')
+        textarea.setAttribute('readonly', '')
         document.querySelector('body').append(textarea)
         this.html = textarea
     }
