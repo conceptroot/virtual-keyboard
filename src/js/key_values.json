@@ -90,7 +90,7 @@
     {
         "id": "Tab",
         "lang": {
-            "en": ["tab"]
+            "en": ["Tab"]
         }
     },
     {
@@ -255,7 +255,7 @@
     {
         "id": "ShiftLeft",
         "lang": {
-            "en": ["shift"]
+            "en": ["Shift"]
         }
     },
     {
@@ -337,7 +337,7 @@
     {
         "id": "Lang",
         "lang": {
-            "en": ["lang"]
+            "en": ["Lang"]
         }
     },
     {
@@ -361,7 +361,7 @@
     {
         "id": "fn",
         "lang": {
-            "en": ["fn"]
+            "en": ["Fn"]
         }
     },
     {
@@ -379,7 +379,7 @@
     {
         "id": "fn",
         "lang": {
-            "en": ["fn"]
+            "en": ["Fn"]
         }
     },
     {
