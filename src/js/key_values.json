@@ -385,25 +385,25 @@
     {
         "id": "ArrowLeft",
         "lang": {
-            "en": ["⬅️"]
+            "en": ["⬅"]
         }
     },
     {
         "id": "ArrowDown",
         "lang": {
-            "en": ["🔽"]
+            "en": ["⬇"]
         }
     },
     {
         "id": "ArrowUp",
         "lang": {
-            "en": ["🔼"]
+            "en": ["⬆"]
         }
     },
     {
         "id": "ArrowRight",
         "lang": {
-            "en": ["➡️"]
+            "en": ["➡"]
         }
     },
     {

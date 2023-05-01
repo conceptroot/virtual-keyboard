@@ -39,7 +39,7 @@ export default class WPM {
 
     const title = document.createElement('H2');
     title.classList.add('wpm__title');
-    title.textContent = 'WPM meter';
+    title.textContent = 'CPM meter';
     wpmHtml.append(title);
 
     const nowTitle = document.createElement('p');
