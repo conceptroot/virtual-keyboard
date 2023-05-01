@@ -59,14 +59,6 @@ module.exports = (env, options) => {
       new HtmlWebpackPlugin({
         template: 'src/index.html',
       }),
-      // new CopyPlugin({
-      // patterns: [
-      // {
-      // from: "src/js/layout.json",
-      // to: "static",
-      // },
-      // ],
-      // }),
     ],
   };
 

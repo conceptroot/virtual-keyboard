@@ -118,13 +118,11 @@ export default class Key {
       }
     } catch (e) {
       symbol = '💩';
-      // console.warn('В файле key_apperance.json не определены значения для:', this.id);
     }
     return symbol;
   }
 
   emitVirtualPressEvent() {
-    // console.log('🔥🔥🔥 Запускаю виртуальный ивент для кнопки:', this.id);
     const symbol = this.getSymbol();
     const virtualKbPressEvent = new CustomEvent(
       'virtual_kb_press',
@@ -184,7 +182,6 @@ export default class Key {
   emitAndRenderKeyUp() {
     // проверка что шифт отжали
     if (this.isShiftKey()) {
-      // console.log('Это шифт. Отжат!!!', this.id, this.shifted);
       this.emitUnshiftEvent();
       this.renderPressUp();
     }
@@ -193,7 +190,6 @@ export default class Key {
   // Для физических нажатий на клавиатуру
   // Вызов происходит из класса Keyboard
   emitAndRenderKeyDown() {
-    // console.log('~~~~> emitAndRenderKey. this.id', this.id);
     // проверка что обычная кнопка
     if (this.isPrintableKey() || this.isEditKey()) {
       this.emitVirtualPressEvent();
@@ -202,7 +198,6 @@ export default class Key {
     }
     // проверка что шифт нажали
     if (this.isShiftKey()) {
-      // console.log('Это шифт нажат!!!', this.id, this.shifted);
       this.emitShiftEvent();
       this.renderPressDown();
       return;
@@ -211,7 +206,6 @@ export default class Key {
       if (this.shifted) {
         this.emitUnshiftEvent();
         this.renderPressUp();
-        // console.log('this.shifted remove ------>');
         return;
       }
       this.emitShiftEvent();
@@ -236,7 +230,6 @@ export default class Key {
   // Листнер для клика шифта
   addEventListenerShift() {
     this.html.addEventListener('click', () => {
-      // console.log('Это шифт нажат!!!', this.id, this.shifted);
       this.renderPressDown();
       this.emitShiftEvent();
       setTimeout(() => {

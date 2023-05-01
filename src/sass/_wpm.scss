@@ -16,6 +16,7 @@
     background: $background-primary;
     user-select: none;
 }
+
 .wpm__title {
     margin-top: 9px;
     font-size: 12px;
@@ -24,6 +25,7 @@
 .counter__title {
     margin: 12px 0 0;
     font-size: 12px;
+
     &:nth-last-of-type(2) {
         margin: 31px 0 0;
     }
@@ -52,22 +54,26 @@
 }
 
 .screw {
-    position: absolute ;
+    position: absolute;
     content: url('../assets/star.svg');
+
     &:nth-of-type(1) {
         left: 10px;
         top: 10px;
     }
+
     &:nth-of-type(2) {
         right: 10px;
         top: 10px;
         transform: rotate(30deg);
     }
+
     &:nth-of-type(3) {
         left: 10px;
         bottom: 10px;
         transform: rotate(10deg);
     }
+
     &:nth-of-type(4) {
         right: 10px;
         bottom: 10px;

@@ -28,7 +28,6 @@ export class Keyboard {
 
   initEventListeners() {
     document.body.addEventListener('keydown', (e) => {
-      // console.log('====> Keyboard отловила нажатие кнопки. Нажата e.code:', e.code);
       const keys = this.keys.filter((key) => e.code === key.id);
       if (keys.length === 0) return;
       keys.forEach((key, i) => {
@@ -38,31 +37,26 @@ export class Keyboard {
     });
     // пока используется для шифта
     document.body.addEventListener('keyup', (e) => {
-      // console.log('====> Keyboard отловила отжатие кнопки. Нажата e.code:', e.code)
       const keys = this.keys.filter((key) => e.code === key.id);
       if (keys.length === 0) return;
       keys[0].emitAndRenderKeyUp();
     });
     document.body.addEventListener('change_lang', () => {
-      // console.log('====> Keyboard отловила смену языка');
       this.lang = (this.lang === 'en') ? 'ru' : 'en';
       localStorage.setItem('keyboard_language', this.lang);
       this.updateKeyTexts();
     });
     document.body.addEventListener('shift_event', () => {
-      // console.log('====> Keyboard отловила включение шифта');
       this.shifted = true;
       this.updateKeyTexts();
     });
     document.body.addEventListener('unshift_event', () => {
-      // console.log('====> Keyboard отловила выключение шифта');
       this.shifted = false;
       this.updateKeyTexts();
     });
   }
 
   updateKeyTexts() {
-    // console.log('inside updateKeyTexts. Lang:', this.lang, ' Shifted:', this.shifted);
     this.keys.forEach((key) => {
       key.updateKeyText(this.lang, this.shifted);
     });
