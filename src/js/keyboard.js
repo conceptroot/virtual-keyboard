@@ -23,14 +23,16 @@ export class Keyboard {
       // console.log('====> Keyboard отловила нажатие кнопки. Нажата e.code:', e.code);
       const keys = this.keys.filter((key) => e.code === key.id);
       if (keys.length === 0) return;
-      // TODO продумать как быть с одинаковыми клавишами на клавиатуре
-      keys[0].emitAndRenderKeyDown();
+      keys.forEach((key, i) => {
+        if (i === 0) key.emitAndRenderKeyDown();
+        else key.renderPress();
+      });
     });
+    // пока используется для шифта
     document.body.addEventListener('keyup', (e) => {
       // console.log('====> Keyboard отловила отжатие кнопки. Нажата e.code:', e.code)
       const keys = this.keys.filter((key) => e.code === key.id);
       if (keys.length === 0) return;
-      // TODO продумать как быть с одинаковыми клавишами на клавиатуре
       keys[0].emitAndRenderKeyUp();
     });
     document.body.addEventListener('change_lang', () => {
