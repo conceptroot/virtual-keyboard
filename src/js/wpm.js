@@ -3,6 +3,12 @@ export default class WPM {
     this.html = undefined;
     this.htmlSpeedNow = undefined;
     this.htmlSpeedMax = undefined;
+    this.nowSpeed = undefined;
+    this.maxSpeed = undefined;
+    this.queueSizeInMs = 5000;
+    this.refreshTime = 1000;
+    this.keysSet = new Set();
+
     this.init();
   }
 
@@ -11,6 +17,20 @@ export default class WPM {
     for (let i = 0; i < 4; i += 1) {
       this.createScrewElement(i);
     }
+    this.startCounter();
+    this.initEventListeners();
+  }
+
+  initEventListeners() {
+    document.body.addEventListener('keydown', () => {
+      this.tickKeyPress();
+    });
+  }
+
+  startCounter() {
+    setInterval(() => {
+      this.countWpm();
+    }, this.refreshTime);
   }
 
   createElement() {
@@ -33,8 +53,8 @@ export default class WPM {
     nowText.classList.add('counter__text');
     nowText.textContent = '---';
     nowContainer.append(nowText);
-    this.htmlSpeedNow = nowContainer;
-    wpmHtml.append(this.htmlSpeedNow);
+    wpmHtml.append(nowContainer);
+    this.htmlSpeedNow = nowText;
 
     const maxTitle = document.createElement('p');
     maxTitle.classList.add('counter__title');
@@ -47,8 +67,8 @@ export default class WPM {
     maxText.classList.add('counter__text');
     maxText.textContent = '---';
     maxContainer.append(maxText);
-    this.htmlSpeedMax = maxContainer;
-    wpmHtml.append(this.htmlSpeedMax);
+    wpmHtml.append(maxContainer);
+    this.htmlSpeedMax = maxText;
 
     const credits = document.createElement('p');
     credits.classList.add('wpm__credits');
@@ -63,5 +83,30 @@ export default class WPM {
     screw.classList.add('screw');
     screw.setAttribute('alt', 'screw');
     this.html.append(screw);
+  }
+
+  renderSpeed(currentSpeed) {
+    this.nowSpeed = currentSpeed;
+    this.htmlSpeedNow.innerText = this.nowSpeed;
+    if (this.nowSpeed > 0 && this.maxSpeed === undefined) this.maxSpeed = 0;
+    if (this.nowSpeed > this.maxSpeed) {
+      this.maxSpeed = this.nowSpeed;
+      this.htmlSpeedMax.innerText = this.maxSpeed;
+    }
+  }
+
+  countWpm() {
+    this.filterActualKeyPresses();
+    const currentSpeed = this.keysSet.size * (60000 / this.queueSizeInMs);
+    this.renderSpeed(currentSpeed);
+  }
+
+  tickKeyPress() {
+    this.keysSet.add(new Date());
+  }
+
+  filterActualKeyPresses() {
+    const now = new Date();
+    this.keysSet = new Set([...this.keysSet].filter((data) => data > (now - this.queueSizeInMs)));
   }
 }
