@@ -1,6 +1,7 @@
 import Key from './key';
 import keyAppearance from './key_apperance.json';
 import keyValuesList from './key_values.json';
+import WPM from './wpm';
 
 export class Keyboard {
   constructor() {
@@ -9,6 +10,7 @@ export class Keyboard {
     this.htmlLines = [];
     this.lang = localStorage.getItem('keyboard_language') || 'en';
     this.shifted = false;
+    this.wpm = undefined;
     this.init();
   }
 
@@ -16,6 +18,12 @@ export class Keyboard {
     this.createElement();
     this.createKeyboard();
     this.initEventListeners();
+    this.initWPM();
+  }
+
+  initWPM() {
+    this.wpm = new WPM();
+    this.html.append(this.wpm.html);
   }
 
   initEventListeners() {

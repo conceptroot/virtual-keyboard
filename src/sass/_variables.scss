@@ -2,6 +2,22 @@
 $width-main: 920px;
 $size-key: 55px;
 $size-key-gap: 10px;
+$size-wpm-width: 135px;
+$size-wpm-height: 267px;
+$size-wpm-counter-width: 80px;
+$size-wpm-counter-height: 43px;
+
+$size-wpm-counter-font: 36px;
+
+
+$font-main: 'Ubuntu', sans-serif;
+$font-mono: 'Syne Mono', monospace;
+
+$color-main: black;
+$color-counter: rgba(212, 212, 212, 1);
+
+
+$background-counter: rgba(0,0,0, 0.65);
 
 $background-primary: 
             radial-gradient(

@@ -1,4 +1,5 @@
 .keyboard {
+    position: relative;
     margin: 50px auto;
     padding: 5px;
     display: flex;
@@ -24,7 +25,6 @@
     border-radius: 5px;
     box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.20);
     border-radius: 8px;
-    font-family: 'Yomogi', cursive;
     font-size: 1.2rem;
     color: #1a1a1a;
     user-select: none;
