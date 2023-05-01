@@ -5,6 +5,7 @@ export default class Key {
     this.key_values = keyValues;
     this.lang = lang; // ru, en
     this.style = keyConfig.style; // primary, secondary
+    this.size = keyConfig.size;
     this.html = null;
     this.shifted = shifted;
     this.init();
@@ -297,6 +298,9 @@ export default class Key {
       key.classList.add('key_secondary');
     } else if (this.style === 'invisible') {
       key.classList.add('key_invisible');
+    }
+    if (this.size === 'double') {
+      key.classList.add('key_big');
     }
     this.html = key;
 

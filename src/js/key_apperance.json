@@ -240,23 +240,17 @@
         "style": "secondary"
     },
     {
-        "id": "fn",
-        "style": "secondary"
-    },
-    {
         "id": "Space",
-        "style": "primary"
+        "style": "primary",
+        "size": "double"
     },
 
     { "id": "nextline" },
 
     {
         "id": "Space",
-        "style": "primary"
-    },
-    {
-        "id": "fn",
-        "style": "secondary"
+        "style": "primary",
+        "size": "double"
     },
     {
         "id": "ArrowLeft",
