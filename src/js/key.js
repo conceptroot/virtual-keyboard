@@ -50,6 +50,9 @@ export default class Key {
       'Comma',
       'Slash',
       'Semicolon',
+      'BracketLeft',
+      'BracketRight',
+      'Backslash',
     ];
     if (printKeys.indexOf(this.id) !== -1) return true;
     return false;

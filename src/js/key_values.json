@@ -406,10 +406,34 @@
             "en": ["➡"]
         }
     },
+    
+
+
+
     {
         "id": "ShiftRight",
         "lang": {
             "en": ["rShift"]
+        }
+    },
+    {
+        "id": "BracketLeft",
+        "lang": {
+            "en": ["[", "{"],
+            "ru": ["х", "Х"]
+        }
+    },
+    {
+        "id": "BracketRight",
+        "lang": {
+            "en": ["]", "}"],
+            "ru": ["ъ", "Ъ"]
+        }
+    },
+    {
+        "id": "Backslash",
+        "lang": {
+            "en": ["\\", "|"]
         }
     }
 ]

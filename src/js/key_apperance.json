@@ -268,8 +268,24 @@
         "id": "ArrowRight",
         "style": "secondary"
     },
+    
+
+    
     {
         "id": "ShiftRight",
         "style": "invisible"
+    },
+    {
+        "id": "BracketLeft",
+        "style": "invisible"
+    },
+    {
+        "id": "BracketRight",
+        "style": "invisible"
+    },
+    {
+        "id": "Backslash",
+        "style": "invisible"
     }
+
 ]
